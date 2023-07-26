@@ -1,7 +1,7 @@
 import streamlit as st
 
 def main():
-    st.title("Carbon Footprint Calculator")
+    st.title("Malama Carbon Footprint Calculator")
 
     # Initialize variables to store user inputs
     energy_consumption = 0
@@ -45,7 +45,7 @@ def main():
 
     # Display the total_carbon_footprint value in a card format
     total_carbon_footprint = int(total_carbon_footprint)
-    st.card(total_carbon_footprint, format="%d kg CO2 per year")
-
+    st.info(f"{total_carbon_footprint} kg CO2 per year")
+    
 if __name__ == "__main__":
     main()
