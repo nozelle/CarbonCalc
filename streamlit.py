@@ -41,10 +41,11 @@ def main():
 
     total_carbon_footprint += waste_production * 0.1
 
-    if shopping_habits == "Minimal waste (buying local, reducing packaging, etc.)":
-        total_carbon_footprint -= 50
+    st.markdown("<h2>Your estimated carbon footprint is:</h2>", unsafe_allow_html=True)
 
-    st.write("Your estimated carbon footprint is:", total_carbon_footprint, "kg CO2 per year")
+    # Display the total_carbon_footprint value in a card format
+    total_carbon_footprint = int(total_carbon_footprint)
+    st.card(total_carbon_footprint, format="%d kg CO2 per year")
 
 if __name__ == "__main__":
     main()
